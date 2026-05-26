@@ -513,14 +513,11 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
 
     <!-- Redes Sociais Flutuantes -->
     <div class="floating-social">
-        <a href="https://www.instagram.com/isaacartte_tattoo/" target="_blank" class="fs-btn fs-instagram" title="Instagram">
+        <a href="https://www.instagram.com/tallytaalves/" target="_blank" class="fs-btn fs-instagram" title="Instagram">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://www.google.com/search?q=Isaacartte+Tattoo" target="_blank" class="fs-btn fs-google" title="Google Meu Negócio">
+        <a href="https://share.google/SsqxItTnEHWXe0NTZ" target="_blank" class="fs-btn fs-google" title="Google Meu Negócio">
             <i class="fab fa-google"></i>
-        </a>
-        <a href="https://www.youtube.com/@Isaacartte" target="_blank" class="fs-btn fs-youtube" title="YouTube">
-            <i class="fab fa-youtube"></i>
         </a>
     </div>
 </body>
