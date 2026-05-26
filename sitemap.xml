@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Página principal -->
+  <url>
+    <loc>https://seumoreira.com.br/</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://seumoreira.com.br/assets/img/logo-barbearia.webp</image:loc>
+      <image:title>Barbearia Seu Moreira — O Melhor Corte e Barba em João Pessoa</image:title>
+    </image:image>
+  </url>
+
+  <!-- Se tiver páginas adicionais, adicione aqui seguindo o mesmo padrão -->
+  <!--
+  <url>
+    <loc>https://radicaltrek.com.br/seguranca</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  -->
+
+</urlset>

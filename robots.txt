@@ -1,0 +1,9 @@
+# Barbearia Seu Moreira — robots.txt
+User-agent: *
+Allow: /
+
+# Bloquear arquivos desnecessários para crawlers
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+Sitemap: https://seumoreira.com.br/sitemap.xml

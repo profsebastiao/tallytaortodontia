@@ -1,0 +1,16 @@
+{
+  "name": "Barbearia Seu Moreira",
+  "short_name": "Seu Moreira",
+  "description": "Barbearia Premium em João Pessoa. Agende seu horário e viva a experiência.",
+  "start_url": "/seumoreira/index.php",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#c5a059",
+  "icons": [
+    {
+      "src": "assets/img/logo-barbearia.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    }
+  ]
+}
