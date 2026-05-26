@@ -11,7 +11,7 @@
  * As variáveis extraídas são usadas principalmente nas meta tags de SEO e 
  * na pré-carga (preload) de imagens críticas.
  */
-$config_js = file_get_contents('assets/js/config.js');
+$config_js = @file_get_contents(__DIR__ . '/assets/js/config.js');
 preg_match('/DRIVER_NAME:\s*["\']([^"\']*)["\']/', $config_js, $name_matches);
 preg_match('/DRIVER_PHONE:\s*["\']([^"\']*)["\']/', $config_js, $phone_matches);
 preg_match('/FAVICON:\s*["\']([^"\']*)["\']/', $config_js, $favicon_matches);
