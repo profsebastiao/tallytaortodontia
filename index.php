@@ -51,19 +51,19 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
         content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://images.unsplash.com https://isaacarttetattoo.com.br https://i.ytimg.com; frame-src 'self' https://www.youtube.com; connect-src 'self' https://www.google-analytics.com;">
 
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#0f4c5c">
 
-    <title>Dra. Tallyta Alves | Invisalign e Ortodontia em João Pessoa</title>
+    <title>Podóloga em João Pessoa | Adriana C. Barbosa – Unha Encravada e Pé Diabético</title>
 
     <meta name="description"
-        content="Dra. Tallyta Alves: Ortodontia digital e Invisalign em João Pessoa com atendimento exclusivo, ambiente privado e resultado impecável no seu sorriso. Agende sua avaliação.">
+        content="Adriana C. Barbosa: Podologia clínica, foco em unha encravada (onicocriptose) e pé diabético em João Pessoa. Atendimento humanizado. Agende sua avaliação.">
     <meta name="keywords"
-        content="Invisalign João Pessoa, Ortodontia JP, Aparelho Invisível, Dra Tallyta Alves, Consultório Odontológico Privado, Dentista em João Pessoa">
+        content="Podologia João Pessoa, Podóloga JP, Unha Encravada, Pé Diabético, Micose de Unha, Calosidades, Adriana Barbosa">
 
     <!-- Open Graph for Facebook / WhatsApp -->
-    <meta property="og:title" content="Ortodontia Digital Dra. Tallyta | Sorriso Perfeito em João Pessoa">
+    <meta property="og:title" content="Podóloga Especialista | Adriana C. Barbosa em João Pessoa">
     <meta property="og:description"
-        content="Transforme seu sorriso com Invisalign. Atendimento individual e resultado de alto nível em João Pessoa.">
+        content="Cuidado podológico com quem entende do assunto. Tratamento de unha encravada e pé diabético em João Pessoa.">
     <meta property="og:image" content="https://isaacarttetattoo.com.br/<?php echo $logo_header; ?>">
     <meta property="og:url" content="https://isaacarttetattoo.com.br/">
     <meta property="og:type" content="website">
@@ -72,8 +72,8 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Dentist",
-  "name": "Dra. Tallyta Alves",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Adriana C. Barbosa - Podóloga",
   "image": "https://isaacarttetattoo.com.br/<?php echo $logo_header; ?>",
   "@id": "https://isaacarttetattoo.com.br/",
   "url": "https://isaacarttetattoo.com.br/",
@@ -81,10 +81,11 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "300"
+    "reviewCount": "500"
   },
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Av. Dom Manoel Paiva, 350",
     "addressLocality": "João Pessoa",
     "addressRegion": "PB",
     "addressCountry": "BR"
@@ -99,13 +100,14 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
       "opens": "09:00",
-      "closes": "19:00"
+      "closes": "18:00"
     }
   ],
   "priceRange": "$$",
-  "description": "Consultório odontológico especializado em Invisalign e ortodontia em João Pessoa. Atendimento privativo e exclusivo.",
+  "description": "Clínica de Podologia especializada em unha encravada, pé diabético e calosidades em João Pessoa.",
   "sameAs": [
-    "https://wa.me/<?php echo $driver_phone; ?>"
+    "https://wa.me/<?php echo $driver_phone; ?>",
+    "https://www.instagram.com/adriana.barbosa.19"
   ]
 }
 </script>
@@ -164,7 +166,7 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
             white-space: nowrap !important;
             position: relative !important;
         }
-        .filter-btn.active { color: #8B5A2B !important; }
+        .filter-btn.active { color: var(--brand-gold) !important; }
         .filter-btn.active::after {
             content: '' !important;
             position: absolute !important;
@@ -172,7 +174,7 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
             left: 0 !important;
             width: 100% !important;
             height: 3px !important;
-            background: #8B5A2B !important;
+            background: var(--brand-gold) !important;
         }
 
         .portfolio-slider-container {
@@ -268,8 +270,8 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
             transition: 0.3s !important;
         }
         .lightbox-prev:hover, .lightbox-next:hover {
-            background: #8B5A2B !important;
-            border-color: #8B5A2B !important;
+            background: var(--brand-gold) !important;
+            border-color: var(--brand-gold) !important;
         }
         .lightbox-prev { left: -80px !important; }
         .lightbox-next { right: -80px !important; }
@@ -344,31 +346,36 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
 
 <body>
 
-    <nav class="navbar" id="navbar">
-        <a href="index.php" class="logo" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="<?php echo $logo_header; ?>" alt="Logo Dra. Tallyta Alves" class="logo-img" id="logo-img" loading="lazy">
-            <span class="nav-seo-text">Ortodontia Digital Avançada</span>
-        </a>
-        <button class="btn-trial" id="nav-btn" onclick="scrollToPlans()">Ver Serviços</button>
+    <nav class="navbar" id="navbar" style="flex-direction: column; padding: 0 !important;">
+        <div style="background-color: var(--brand-gold); color: white; text-align: center; padding: 8px 10px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; width: 100%; letter-spacing: 1px;">
+            🔥 AGENDA LIMITADA — POUCOS HORÁRIOS DISPONÍVEIS ESTA SEMANA
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 12px 5%; box-sizing: border-box;">
+            <a href="index.php" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+                <div style="width: 45px; height: 45px; border: 2px solid var(--brand-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--brand-gold); font-weight: 800; font-size: 1.2rem; background: white;">AB</div>
+                <span class="nav-seo-text">Podologia Avançada</span>
+            </a>
+            <button class="btn-trial" id="nav-btn" onclick="scrollToPlans()">Ver Serviços</button>
+        </div>
     </nav>
 
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge reveal">🔥 Agenda limitada para esta semana</div>
-            <h1 class="hero-title">Ortodontia e Invisalign em João Pessoa com atendimento exclusivo e resultado impecável no seu sorriso.</h1>
-            <p class="hero-subtitle">Transforme seu sorriso com previsibilidade. Atendimento com hora marcada, ambiente privado e foco total em cada detalhe do seu tratamento.</p>
+            <div class="hero-badge reveal" style="display: none;">🔥 AGENDA LIMITADA — POUCOS HORÁRIOS DISPONÍVEIS ESTA SEMANA</div>
+            <h1 class="hero-title" style="display: none;">Cuidado podológico especializado em João Pessoa, com atendimento humanizado e resultado que você sente no primeiro passo.</h1>
+            <p class="hero-subtitle" style="display: none;">Trate unha encravada, pé diabético e calosidades com quem entende do assunto — hora marcada, ambiente acolhedor e foco total no seu cuidado.</p>
 
-            <div class="hero-triggers reveal">
-                <span><i class="fas fa-user-check"></i> Atendimento individual</span>
-                <span><i class="fas fa-clock"></i> Sem pressa, sem fila</span>
-                <span><i class="fas fa-star"></i> Resultado de alto nível</span>
-            </div>
-
-            <div class="hero-buttons">
-                <a href="#plans" class="cta-main pulse">
+            <div class="hero-buttons" style="margin-top: calc(45vh + 20px);">
+                <a href="https://wa.me/<?php echo $driver_phone; ?>?text=Ol%C3%A1%21%20Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20podol%C3%B3gica" class="cta-main pulse">
                     👉 QUERO AGENDAR MINHA AVALIAÇÃO
                 </a>
+            </div>
+
+            <div class="hero-triggers reveal" style="margin-top: 15px;">
+                <span><i class="fas fa-user-check"></i> Atendimento individual e sem pressa</span>
+                <span><i class="fas fa-heartbeat"></i> Especialista em pé diabético</span>
+                <span><i class="fas fa-leaf"></i> Ambiente limpo e acolhedor</span>
             </div>
         </div>
     </section>
@@ -384,8 +391,8 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
-                    <span class="stat-number">+300</span>
-                    <p class="stat-text">Sorrisos transformados</p>
+                    <span class="stat-number">+500</span>
+                    <p class="stat-text">Pacientes atendidos</p>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
@@ -399,8 +406,8 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
     <section class="tours-pricing-section" id="plans">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Tratamentos Exclusivos</h2>
-                <p class="section-subtitle">Cada sorriso é único. Trabalhamos com tecnologia, precisão e atendimento personalizado para criar resultados naturais e duradouros.</p>
+                <h2 class="section-title">Cuidados Especializados</h2>
+                <p class="section-subtitle">Cada pé é único. Trabalhamos com cuidado minucioso, higiene rigorosa e técnicas modernas para devolver seu conforto.</p>
             </div>
 
             <div class="pricing-grid" id="cards-container"></div>
@@ -412,7 +419,7 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
         <div class="container">
             <div class="section-header text-center">
                 <h2 class="section-title">Portfólio</h2>
-                <p class="section-subtitle">Conheça alguns dos meus trabalhos mais recentes e exclusivos.</p>
+                <p class="section-subtitle">Conheça alguns dos meus atendimentos mais recentes.</p>
             </div>
 
             <!-- Filtros e Navegação do Portfólio -->
@@ -446,22 +453,22 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
 
     <section class="catalog" id="como-funciona">
         <p class="catalog-overline">Como Funciona</p>
-        <h2 class="catalog-subtitle" style="font-size:1.3rem;">Simples, rápido e sem complicação</h2>
+        <h2 class="catalog-subtitle" style="font-size:1.3rem; text-align: center;">Simples, rápido e sem complicação</h2>
 
         <div class="process-container" id="process-container">
             <!-- Renderizado via JS -->
         </div>
 
         <div class="catalog-footer text-center" style="margin-top: 50px; display: flex; justify-content: center;">
-            <a href="#plans" class="cta-main">
+            <a href="https://wa.me/<?php echo $driver_phone; ?>?text=Ol%C3%A1%21%20Quero%20come%C3%A7ar%20agora" class="cta-main">
                 👉 QUERO COMEÇAR AGORA
             </a>
         </div>
     </section>
 
     <section class="testimonials reveal" id="testimonials">
-        <h2 class="section-title">Quem aprova, recomenda</h2>
-        <p class="section-subtitle">Confira o que nossos clientes dizem sobre a experiência exclusiva.</p>
+        <h2 class="section-title" style="text-align: center;">Quem aprova, recomenda</h2>
+        <p class="section-subtitle">Confira o que nossos pacientes dizem sobre a experiência do cuidado.</p>
 
         <div class="testimonials-container" id="testimonials-container">
             <!-- Renderizado via JS -->
@@ -470,12 +477,12 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
 
     <!-- FAQ -->
     <section class="faq-section" id="faq">
-        <h2 class="section-title">Perguntas Frequentes</h2>
-        <p class="section-subtitle">Sabemos que você pode ter algumas dúvidas e preocupações sobre o tratamento com Invisalign. Mas não se preocupe, estamos aqui para esclarecer tudo!</p>
+        <h2 class="section-title" style="text-align: center;">Perguntas Frequentes</h2>
+        <p class="section-subtitle">Sabemos que você pode ter algumas dúvidas e preocupações sobre os tratamentos podológicos. Mas não se preocupe, estamos aqui para esclarecer tudo!</p>
         <div class="faq-container" id="faq-container"></div>
         
         <div style="text-align: center; margin-top: 50px;">
-            <a href="https://wa.me/<?php echo $driver_phone; ?>?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20Invisalign" target="_blank" class="cta-main" style="font-size: 1rem; padding: 15px 30px;">
+            <a href="https://wa.me/<?php echo $driver_phone; ?>?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida" target="_blank" class="cta-main" style="font-size: 1rem; padding: 15px 30px;">
                 <i class="fa-brands fa-whatsapp"></i> Minha dúvida não está aqui
             </a>
         </div>
@@ -486,7 +493,7 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
         <div class="container text-center">
             <h2 class="final-cta-title">🔥 Agenda limitada para essa semana</h2>
             <p class="final-cta-text">Garanta seu horário antes que as vagas acabem.</p>
-            <a href="https://wa.me/<?php echo $driver_phone; ?>?text=Olá! Quero agendar minha avaliação ortodôntica agora!"
+            <a href="https://wa.me/<?php echo $driver_phone; ?>?text=Olá! Quero agendar minha avaliação podológica agora!"
                 class="cta-main btn-large pulse">
                 👉 QUERO AGENDAR MINHA AVALIAÇÃO AGORA
             </a>
@@ -497,9 +504,9 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
     <footer class="footer">
         <div class="footer-container">
             <div class="logo">
-                <img src="<?php echo $logo_footer; ?>" alt="Dra. Tallyta Alves Logo" style="max-height: 50px;" loading="lazy">
+                <div style="width: 45px; height: 45px; border: 2px solid #888; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #888; font-weight: 800; font-size: 1.2rem; background: transparent;">AB</div>
             </div>
-            <p>&copy; 2026 Dra. Tallyta Alves - João Pessoa. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Adriana C. Barbosa - João Pessoa. Todos os direitos reservados.</p>
             <p style="margin-top: 10px; font-size: 0.85rem; color: #888;">Desenvolvido por <a href="https://sebastiao.dev.br" target="_blank" style="color: var(--brand-gold); text-decoration: none;">sebastiao.dev.br</a></p>
         </div>
     </footer>
@@ -513,10 +520,10 @@ $cta_bg_mobile = $cta_bg_m_matches[1] ?? $cta_bg;
 
     <!-- Redes Sociais Flutuantes -->
     <div class="floating-social">
-        <a href="https://www.instagram.com/tallytaalves/" target="_blank" class="fs-btn fs-instagram" title="Instagram">
+        <a href="https://www.instagram.com/adriana.barbosa.19" target="_blank" class="fs-btn fs-instagram" title="Instagram">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://share.google/SsqxItTnEHWXe0NTZ" target="_blank" class="fs-btn fs-google" title="Google Meu Negócio">
+        <a href="#" target="_blank" class="fs-btn fs-google" title="Google Meu Negócio">
             <i class="fab fa-google"></i>
         </a>
     </div>

@@ -8,9 +8,9 @@
 
    /* Clínica Premium Colors */
    --brand-dark: #FFFFFF;
-   --brand-gold: #8A4EA3; /* Roxo principal */
+   --brand-gold: #0f4c5c; /* Verde Petróleo */
    --brand-gold-light: #F3E9DD; /* Bege claro */
-   --brand-gold-dark: #6E3D85; /* Roxo escuro */
+   --brand-gold-dark: #09333e; /* Verde Petróleo Escuro */
 
    --whatsapp-green: #25D366;
    --whatsapp-hover: #1da851;
@@ -86,16 +86,16 @@ body {
 }
 
 .nav-seo-text {
-   color: #fff;
-   font-size: 0.8rem;
-   font-weight: 600;
+   color: var(--brand-gold);
+   font-size: 0.95rem;
+   font-weight: 700;
    margin-left: 10px;
    max-width: 200px;
    transition: color 0.3s ease;
 }
 
 .navbar.scrolled .nav-seo-text {
-   color: #2A2A2A !important;
+   color: var(--brand-gold) !important;
 }
 
 .btn-trial {
@@ -121,15 +121,15 @@ body {
    4. HERO SECTION
 ========================================= */
 .hero {
-   height: 100vh;
-   min-height: 700px;
-   position: relative;
-   display: flex;
-   align-items: center;
-   justify-content: flex-start;
-   text-align: left;
-   background: var(--brand-dark);
-   padding-left: 20%;
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    background: var(--brand-dark);
+    padding-left: 5%;
 }
 
 .hero-overlay {
@@ -295,6 +295,8 @@ body {
    margin: 5px 0;
    font-size: 0.9rem;
 }
+
+
 
 .stat-text {
    color: var(--text-muted);

@@ -1,5 +1,5 @@
 /**
- * CHAT DE AUTOATENDIMENTO - ISAACARTTE TATTOO
+ * CHAT DE AUTOATENDIMENTO - ISAACARTTE TATTOO / AGORA ADRIANA PODOLOGIA
  * Script 100% JavaScript (Sem Backend) que simula um chat humanizado
  * para captar leads e encaminhá-los prontos para o WhatsApp.
  */
@@ -131,7 +131,7 @@ function getGreeting() {
 async function startConversation() {
     const greeting = getGreeting();
     updateProgress(1);
-    await addBotMessage(`${greeting}! Seja bem-vindo(a) ao consultório da Dra. Tallyta Alves. ✨`);
+    await addBotMessage(`${greeting}! Seja bem-vindo(a) à clínica de Podologia da ${DRIVER_NAME}. ✨`);
     await addBotMessage("Antes de continuarmos, você já é nosso paciente?");
     addOptions([
         { text: "✅ Sim, já sou paciente", value: "cliente_sim" },
@@ -151,11 +151,11 @@ function handleUserInput() {
 }
 
 async function handleOptionSelection(value) {
-    if (value === "cliente_sim" || value === "cliente_nao" || value === "sim_invisalign" || value === "duvida_tratamento") {
+    if (value === "cliente_sim" || value === "cliente_nao" || value === "sim_agendar" || value === "duvida_tratamento") {
         let userText = value;
         if (value === "cliente_sim") userText = "Sim, já sou paciente";
         if (value === "cliente_nao") userText = "Não, seria a primeira vez";
-        if (value === "sim_invisalign") userText = "Tenho interesse no Invisalign";
+        if (value === "sim_agendar") userText = "Sim, quero agendar!";
         if (value === "duvida_tratamento") userText = "Ainda tenho dúvidas";
         
         addUserMessage(userText);
@@ -168,10 +168,10 @@ async function handleOptionSelection(value) {
     addUserMessage(value);
 
     switch (value) {
-        case "invisalign":
-        case "ortodontia":
-        case "odontopediatria":
-            await addBotMessage(`Excelente escolha! Cuidar do seu sorriso é um ótimo passo.`);
+        case "unha_encravada":
+        case "pe_diabetico":
+        case "limpeza":
+            await addBotMessage(`Excelente escolha! Cuidar da saúde dos seus pés é um ótimo passo.`);
             await addBotMessage("Qual é o seu principal objetivo com o tratamento hoje?");
             currentState = "lead_local";
             break;
@@ -203,7 +203,7 @@ async function processState(input) {
                 await addBotMessage("Como devo te chamar para verificarmos seu cadastro?");
                 currentState = "nome_cliente";
             } else {
-                await addBotMessage("Seja muito bem-vindo(a)! Cuidar do seu sorriso é a nossa prioridade. 😁");
+                await addBotMessage("Seja muito bem-vindo(a)! Cuidar da saúde dos seus pés é a nossa prioridade. 😁");
                 await addBotMessage("Como devo te chamar?");
                 currentState = "nome";
             }
@@ -226,12 +226,12 @@ async function processState(input) {
             localStorage.setItem('wa_user_name', input);
             updateProgress(2);
             await addBotMessage(`Prazer, ${usuario.nome}! ✨`);
-            await addBotMessage("Nossa clínica é especialista em ortodontia digital e Invisalign.");
+            await addBotMessage("Nossa clínica é especialista em podologia clínica, unha encravada e pé diabético.");
             await addBotMessage("Qual tratamento você tem mais interesse?");
             addOptions([
-                { text: "💎 Invisalign", value: "invisalign" },
-                { text: "🦷 Ortodontia (Aparelhos)", value: "ortodontia" },
-                { text: "👧 Odontopediatria", value: "odontopediatria" }
+                { text: "👣 Unha Encravada", value: "unha_encravada" },
+                { text: "🩸 Pé Diabético", value: "pe_diabetico" },
+                { text: "✨ Limpeza/Calosidades", value: "limpeza" }
             ]);
             currentState = "menu_vendas";
             break;
@@ -240,9 +240,9 @@ async function processState(input) {
             usuario.origem = input;
             localStorage.setItem('wa_user_origem', input);
             await addBotMessage("Perfeito!");
-            await addBotMessage("Você já conhece como funciona o Invisalign e o escaneamento 3D?");
+            await addBotMessage("Você gostaria de agendar uma avaliação para analisarmos o seu caso de perto?");
             addOptions([
-                { text: "✨ Sim, quero agendar!", value: "sim_invisalign" },
+                { text: "✨ Sim, quero agendar!", value: "sim_agendar" },
                 { text: "🤔 Quero saber mais", value: "duvida_tratamento" }
             ]);
             currentState = "lead_preocupacao";
@@ -253,7 +253,7 @@ async function processState(input) {
             localStorage.setItem('wa_user_desejo', input);
             
             if (input.toLowerCase().includes("saber") || input.toLowerCase().includes("dúvida") || input.toLowerCase().includes("duvida") || input.toLowerCase().includes("mais")) {
-                await addBotMessage("Sem problemas! Ao falarmos no WhatsApp, vou te explicar tudo sobre o escaneamento 3D sem moldes e como nossos tratamentos funcionam.");
+                await addBotMessage("Sem problemas! Ao falarmos no WhatsApp, vou te explicar tudo sobre nossos tratamentos e como podemos te ajudar.");
             } else {
                 await addBotMessage("Ótimo! No próximo passo já vamos abrir o WhatsApp para escolhermos o melhor horário para a sua avaliação.");
             }
@@ -277,11 +277,11 @@ async function finalizarFlow() {
     updateProgress(3);
     await addBotMessage("Perfeito! Preparei tudo para o seu atendimento.");
 
-    let resumo = `👤 Nome: ${usuario.nome}\n🦷 Interesse: ${usuario.servico}\n🎯 Objetivo: ${usuario.origem}\n💡 Obs: ${usuario.desejo}`;
+    let resumo = `👤 Nome: ${usuario.nome}\n👣 Interesse: ${usuario.servico}\n🎯 Objetivo: ${usuario.origem}\n💡 Obs: ${usuario.desejo}`;
 
     await addBotMessage("Clique no botão abaixo para falarmos pelo WhatsApp e agendarmos sua visita! 👇");
 
-    const mensagemWhats = `✨ [ATENDIMENTO] Clínica Dra. Tallyta\n\n${resumo}\n\nOlá! Gostaria de agendar minha avaliação.`;
+    const mensagemWhats = `✨ [ATENDIMENTO] Adriana Podologia\n\n${resumo}\n\nOlá! Gostaria de agendar minha avaliação.`;
     const link = `https://wa.me/${DRIVER_PHONE}?text=${encodeURIComponent(mensagemWhats)}`;
 
     addOptions([
